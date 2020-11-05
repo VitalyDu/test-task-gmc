@@ -1,23 +1,3 @@
-// Vue.component('product',{
-//     template: '.product',
-//     data: function(){
-//         return{
-//             forMeterSquare: 'unit--active',
-//             forPack: ''
-//         }
-//     },
-//     methods: {
-//         priceForPack (){
-//             this.forPack = 'unit--active';
-//             this.forMeterSquare = '';
-//         },
-//         priceForMeterSquare (){
-//             this.forPack = '';
-//             this.forMeterSquare = 'unit--active';
-//         }
-//     }
-// });
-
 var app = new Vue({
     el: '#products_section',
     created() {
@@ -2331,8 +2311,7 @@ var app = new Vue({
         forMeterSquare: 'unit--active',
         forPack: '',
         value: 1,
-        productPriceVidu: '',
-        // value: 1
+        productPriceVidu: ''
     },
     methods: {
         bonusAmount (){
@@ -2343,13 +2322,7 @@ var app = new Vue({
             if (this.products[index].bonusAmount < 1){
                 this.products[index].bonusAmount = 1;
             }
-            // this.products[index].priceGoldAlt = value;
         },
-        // quantityPlus (value, index){
-        //     if(value => 1){
-        //         this.value++;
-        //     }
-        // },
         quantityMinus (index){
                 if(this.products[index].bonusAmount > 1){
                     this.products[index].bonusAmount--;
@@ -2364,70 +2337,5 @@ var app = new Vue({
         priceForMeterSquare (index){
             this.products[index].isActive = true;
         }
-        // priceForPack (prodId){
-        //     return this.products.filter((t)=>{
-        //         if (t.productId == this.prodId){
-        //             this.forPack = 'unit--active';
-        //             this.forMeterSquare = '';
-        //         }
-        //     })
-        // },
-        // priceForMeterSquare (prodId){
-        //     return this.products.filter((t)=>{
-        //         if (t.productId == prodId){
-        //             this.forPack = '';
-        //             this.forMeterSquare = 'unit--active';
-        //         }
-        //     })
-        // }
     }
-    // computed: {
-    //     quantity: function (value, index) {
-    //         return this.products[index].priceGoldAlt(function (value, index) {
-    //           return products[index].priceGoldAlt *= value;
-    //         })
-    //     }
-    // }
-    // components: {
-    //     'product': { 
-    //       template: '.pg_0',
-    //       data: function() {
-    //         return {
-    //             forMeterSquare: 'unit--active',
-    //             forPack: ''
-    //         };
-    //       },
-    //       methods: {
-    //         priceForPack (){
-    //             this.forPack = 'unit--active';
-    //             this.forMeterSquare = '';
-    //         },
-    //         priceForMeterSquare (){
-    //             this.forPack = '';
-    //             this.forMeterSquare = 'unit--active';
-    //         }
-    //       }
-    //     },
-    // }
 });
-
-// var app2 = new Vue({
-//     el: '.product',
-//     data() {
-//         return{
-//             forMeterSquare: 'unit--active',
-//             forPack: ''
-//         }
-//     },
-//     methods: {
-//         priceForPack (){
-//             this.forPack = 'unit--active';
-//             this.forMeterSquare = '';
-//         },
-//         priceForMeterSquare (){
-//             this.forPack = '';
-//             this.forMeterSquare = 'unit--active';
-//         }
-//     }
-// });
-
